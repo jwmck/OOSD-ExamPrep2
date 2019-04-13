@@ -1,0 +1,34 @@
+﻿<Window x:Class="CA2_prep.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CA2_prep"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <ListBox x:Name="lbxEmployees" HorizontalAlignment="Left" Height="225" Margin="10,33,10,0" Grid.Row="1" VerticalAlignment="Top" Width="770"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
+            <Label x:Name="lblEmp" Content="Employees" HorizontalAlignment="Left" Margin="62,53,0,0"  VerticalAlignment="Top"/>
+            <TextBlock x:Name="tblkEmp" HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <Label x:Name="lblPart" Content="Part time" HorizontalAlignment="Left" Margin="62,53,0,0"  VerticalAlignment="Top"/>
+            <TextBlock x:Name="tblkPart" HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <Label x:Name="lblCont" Content="Contractor" HorizontalAlignment="Left" Margin="62,53,0,0"  VerticalAlignment="Top"/>
+            <TextBlock x:Name="tblkCont" HorizontalAlignment="Left" Margin="15,57,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+        </StackPanel>
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <RadioButton GroupName="EmployeeType" Content="All" Tag="All" HorizontalAlignment="Left" Margin="106,60,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="EmployeeType" Content="Employee" Tag="Employee" HorizontalAlignment="Left" Margin="30,60,0,0"  VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="EmployeeType" Content="PartTimer" Tag="PartTimer" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+            <RadioButton GroupName="EmployeeType" Content="Contractor" Tag="Contractor" HorizontalAlignment="Left" Margin="30,60,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        </StackPanel>
+        
+    </Grid>
+</Window>
